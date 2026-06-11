@@ -44,7 +44,8 @@ class FakeTTSModel:
         """Return a tiny valid WAV with route metadata stored in calls."""
 
         self.calls.append((text, language, voice))
-        return encode_wav([0.0, 0.1, -0.1, 0.0], 24000)
+        import numpy as np
+        return encode_wav(np.array([0.0, 0.1, -0.1, 0.0], dtype=np.float32), 24000)
 
 
 @pytest.fixture

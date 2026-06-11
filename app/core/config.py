@@ -35,7 +35,7 @@ class Settings(BaseSettings):
     warmup_on_startup: bool = True
 
     max_text_chars: int = Field(default=1000, ge=1, le=10000)
-    output_sample_rate: int = Field(default=24000, ge=8000, le=48000)
+    output_sample_rate: int = Field(default=44100, ge=8000, le=48000)
 
     default_indic_voice: str = (
         "A clear, natural Indian voice with neutral pacing and studio quality."
